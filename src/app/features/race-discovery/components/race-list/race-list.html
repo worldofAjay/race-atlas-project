@@ -1,0 +1,18 @@
+@if (races.length) {
+  <div class="race-grid">
+    @for (race of races; track race.id) {
+      <article class="race-card">
+        <time class="date-block" [attr.datetime]="race.date"><strong>{{ race.month }}</strong><span>{{ race.day }}</span></time>
+        <div class="race-details">
+          <span class="distance">{{ race.distance }}</span>
+          <h2>{{ race.name }}</h2>
+          <p>{{ race.city }}, {{ race.country }}</p>
+          <p class="date">{{ race.date }}</p>
+        </div>
+        <span class="arrow" aria-hidden="true">→</span>
+      </article>
+    }
+  </div>
+} @else {
+  <div class="empty-state"><h2>No races match yet</h2><p>Try another name, city, or distance.</p></div>
+}

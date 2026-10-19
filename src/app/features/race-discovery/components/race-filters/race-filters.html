@@ -1,0 +1,26 @@
+<section class="filters" aria-label="Find a race">
+  <label class="search-field">
+    <span class="sr-only">Search races by name or city</span>
+    <span aria-hidden="true">⌕</span>
+    <input
+      type="search"
+      [value]="searchTerm"
+      (input)="onSearch($event)"
+      placeholder="Search by race or city"
+    />
+  </label>
+
+  <div class="distance-filters" aria-label="Filter by distance">
+    @for (distance of distances; track distance) {
+      <button
+        type="button"
+        class="filter-chip"
+        [class.active]="selectedDistances.has(distance)"
+        [attr.aria-pressed]="selectedDistances.has(distance)"
+        (click)="distanceToggled.emit(distance)"
+      >
+        {{ distance }}
+      </button>
+    }
+  </div>
+</section>

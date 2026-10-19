@@ -1,0 +1,8 @@
+.filters { display: grid; gap: 1rem; }
+.search-field { align-items: center; background: #fff; border: 1px solid #d9e0ec; border-radius: .85rem; color: #667085; display: flex; gap: .65rem; padding: .8rem 1rem; }
+.search-field:focus-within { border-color: #2867e8; box-shadow: 0 0 0 3px #dce8ff; }
+input { background: transparent; border: 0; color: #172033; font: inherit; outline: 0; width: 100%; }
+.distance-filters { display: flex; flex-wrap: wrap; gap: .6rem; }
+.filter-chip { background: #fff; border: 1px solid #d9e0ec; border-radius: 99px; color: #44506a; cursor: pointer; font: 600 .88rem/1 inherit; padding: .55rem .9rem; }
+.filter-chip:hover, .filter-chip.active { background: #172f67; border-color: #172f67; color: #fff; }
+.sr-only { height: 1px; margin: -1px; overflow: hidden; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); }

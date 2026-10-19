@@ -1,0 +1,8 @@
+.race-grid { display: grid; gap: .85rem; }
+.race-card { align-items: center; background: #fff; border: 1px solid #e3e7ef; border-radius: 1rem; display: grid; gap: 1rem; grid-template-columns: auto 1fr auto; padding: 1.1rem; transition: border-color .18s ease, transform .18s ease; }
+.race-card:hover { border-color: #aac3fc; transform: translateY(-2px); }
+.date-block { background: #eef4ff; border-radius: .65rem; color: #2454ae; display: grid; min-width: 3.65rem; padding: .45rem; place-items: center; }
+.date-block strong { font-size: .7rem; letter-spacing: .08em; }.date-block span { font-size: 1.35rem; font-weight: 800; }
+.distance { color: #2867e8; font-size: .78rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+h2 { color: #172033; font-size: 1.1rem; margin: .2rem 0; }.race-details p { color: #667085; font-size: .92rem; margin: .1rem 0; }.race-details .date { margin-top: .4rem; }.arrow { color: #2867e8; font-size: 1.35rem; }.empty-state { background: #fff; border: 1px dashed #b7c4dc; border-radius: 1rem; color: #667085; padding: 3rem 1rem; text-align: center; }.empty-state h2 { margin: 0 0 .4rem; }
+@media (max-width: 480px) { .race-card { gap: .75rem; grid-template-columns: auto 1fr; }.arrow { display: none; } }

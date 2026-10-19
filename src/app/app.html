@@ -1,0 +1,30 @@
+<main>
+  <header class="hero">
+    <p class="eyebrow">RaceAtlas <span>•</span> Discovery</p>
+    <h2>Track your races here.</h2>
+    <p class="intro">
+      Explore fictional sample races around the world and find a distance that meets you where you
+      are.
+    </p>
+  </header>
+  <section class="discovery" aria-labelledby="discover-heading">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Race finder</p>
+        <h2 id="discover-heading">Discover races</h2>
+      </div>
+      <p class="result-count">{{ visibleRaces().length }} of {{ races.length }} sample events</p>
+    </div>
+    <app-race-filters
+      [searchTerm]="searchTerm()"
+      [selectedDistances]="selectedDistances()"
+      (searchTermChange)="searchTerm.set($event)"
+      (distanceToggled)="toggleDistance($event)"
+    />
+    <p class="disclaimer">
+      Demo data only — race names, locations, and dates are fictional and not verified event
+      information.
+    </p>
+    <app-race-list [races]="visibleRaces()" />
+  </section>
+</main>
